@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>🎯 Funcionalidades de Personalización - Marketplaces Inmobiliarios</title>
+    <link rel="stylesheet" href="stylesCU11.1.css" />
+</head>
+<body>
+    <div class="container">
+        <!-- ==================== HEADER ==================== -->
+        <div class="header">
+            <h1>🎯 Funcionalidades de Personalización</h1>
+            <p>Análisis Completo de Capacidades de Personalización en Marketplaces Inmobiliarios</p>
+        </div>
+
+        <!-- ==================== MARKET OVERVIEW / CATEGORÍAS ==================== -->
+        <div class="market-overview">
+            <a href="index.html" class="back-btn">← Volver al Estudio</a>
+            <h2 class="overview-title">Categorías de Personalización - Análisis por Funcionalidades</h2>
+            
+            <div class="use-cases-grid">
+                <!-- Segmentación y Perfil del Usuario -->
+                <div class="use-case-card blue">
+                    <div class="case-header">
+                        <h3 class="case-title">Segmentación y Perfil del Usuario</h3>
+                        <div class="case-score score-blue">CORE</div>
+                    </div>
+                    <p class="case-description">
+                        <strong>👥 Segmentación Avanzada:</strong> Personalización basada en intereses específicos, tipo de comprador, ubicación geográfica y comportamiento del usuario, 
+                        incluyendo datos bancarios y financieros para recomendaciones precisas.
+                    </p>
+                    <div class="case-features">
+                        <span class="feature-tag">Segmentación por Intereses</span>
+                        <span class="feature-tag">Tipo de Comprador</span>
+                        <span class="feature-tag">Geo-targeting</span>
+                        <span class="feature-tag">Datos Financieros</span>
+                    </div>
+                    <div class="case-actions">
+                        <button class="detail-btn" onclick="toggleDetails('segmentacion')">
+                            📊 Ver Detalles
+                        </button>
+                    </div>
+                    <div id="segmentacion" class="details-content" style="display: none;">
+                        <ul>
+                            <li>Segmentación por intereses específicos (tipo de inmueble, rango de precio, financiamiento requerido)</li>
+                            <li>Segmentación según tipo de comprador (primer comprador, inversionista, segunda vivienda)</li>
+                            <li>Segmentación geográfica (región, comuna, barrio)</li>
+                            <li>Segmentación por comportamiento: frecuencia de visitas, búsquedas guardadas, interacción educativa o asesoría</li>
+                            <li>Perfil y segmentación social y demográfica extendida</li>
+                            <li>Alertas y notificaciones personalizadas</li>
+                            <li>Recomendaciones basadas en datos bancarios o financieros</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Personalización de Contenido y Ofertas -->
+                <div class="use-case-card green">
+                    <div class="case-header">
+                        <h3 class="case-title">Personalización de Contenido y Ofertas</h3>
+                        <div class="case-score score-green">SMART</div>
+                    </div>
+                    <p class="case-description">
+                        <strong>📱 Contenido Dinámico:</strong> Adaptación en tiempo real de contenidos, ofertas y funcionalidades según el segmento del usuario, 
+                        con integración de perfiles sociales y alertas inteligentes de mercado.
+                    </p>
+                    <div class="case-features">
+                        <span class="feature-tag">Contenido Dinámico</span>
+                        <span class="feature-tag">Ofertas Segmentadas</span>
+                        <span class="feature-tag">Alertas Inteligentes</span>
+                        <span class="feature-tag">Tiempo Real</span>
+                    </div>
+                    <div class="case-actions">
+                        <button class="detail-btn" onclick="toggleDetails('contenido')">
+                            📊 Ver Detalles
+                        </button>
+                    </div>
+                    <div id="contenido" class="details-content" style="display: none;">
+                        <ul>
+                            <li>Contenidos, ofertas y funcionalidades personalizadas según segmento</li>
+                            <li>Contenido educativo relevante para distintos perfiles</li>
+                            <li>Notificaciones personalizadas basadas en eventos del mercado</li>
+                            <li>Alertas automáticas sobre cambios en precios, lanzamientos o baja de stock</li>
+                            <li>Adaptación dinámica y en tiempo real de las propiedades sugeridas</li>
+                            <li>Integración con perfiles de usuario sociales o financieros</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Herramientas y Funcionalidades Personalizadas -->
+                <div class="use-case-card purple">
+                    <div class="case-header">
+                        <h3 class="case-title">Herramientas y Funcionalidades Personalizadas</h3>
+                        <div class="case-score score-purple">TOOLS</div>
+                    </div>
+                    <p class="case-description">
+                        <strong>🛠️ Suite de Herramientas:</strong> Conjunto completo de asistentes virtuales, simuladores financieros, sistemas de ranking personalizado 
+                        y herramientas de gamificación adaptativas para maximizar engagement.
+                    </p>
+                    <div class="case-features">
+                        <span class="feature-tag">Asistentes IA</span>
+                        <span class="feature-tag">Simuladores</span>
+                        <span class="feature-tag">Ranking Smart</span>
+                        <span class="feature-tag">Gamificación</span>
+                    </div>
+                    <div class="case-actions">
+                        <button class="detail-btn" onclick="toggleDetails('herramientas')">
+                            📊 Ver Detalles
+                        </button>
+                    </div>
+                    <div id="herramientas" class="details-content" style="display: none;">
+                        <ul>
+                            <li>Asistentes virtuales con respuestas adaptadas</li>
+                            <li>Videos y tutoriales segmentados por perfil</li>
+                            <li>Simuladores de crédito hipotecario personalizados</li>
+                            <li>Sistemas de puntuación o ranking personalizado de propiedades</li>
+                            <li>Clasificación de inmuebles basada en preferencias y comportamiento del usuario</li>
+                            <li>Programación de visitas y recordatorios automáticos personalizados</li>
+                            <li>Integración con herramientas financieras personalizadas</li>
+                            <li>Calculadoras y simuladores financieros que se ajustan al perfil crediticio y capacidad de pago</li>
+                            <li>Comparación personalizada de propiedades</li>
+                            <li>Filtros avanzados personalizados según historial de uso</li>
+                            <li>Gamificación adaptativa para incentivar uso y fidelidad (badges, recompensas)</li>
+                            <li>Incentivos personalizados para compradores recurrentes o agentes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Experiencia del Usuario y Soporte Personalizado -->
+                <div class="use-case-card blue">
+                    <div class="case-header">
+                        <h3 class="case-title">Experiencia del Usuario y Soporte Personalizado</h3>
+                        <div class="case-score score-blue">UX+</div>
+                    </div>
+                    <p class="case-description">
+                        <strong>🎨 Experiencia Diferenciada:</strong> Manejo personalizado de la experiencia según tipo de usuario, con dashboards adaptativos, 
+                        soporte multicanal y recomendaciones en tiempo real basadas en comportamiento.
+                    </p>
+                    <div class="case-features">
+                        <span class="feature-tag">UX Diferenciada</span>
+                        <span class="feature-tag">Dashboards</span>
+                        <span class="feature-tag">Soporte 360°</span>
+                        <span class="feature-tag">Real-time</span>
+                    </div>
+                    <div class="case-actions">
+                        <button class="detail-btn" onclick="toggleDetails('experiencia')">
+                            📊 Ver Detalles
+                        </button>
+                    </div>
+                    <div id="experiencia" class="details-content" style="display: none;">
+                        <ul>
+                            <li>Manejo de experiencia diferenciado para tipos de usuarios (inversionistas, familias, compradores sociales)</li>
+                            <li>Recomendaciones basadas en comportamiento en tiempo real</li>
+                            <li>Personalización basada en dispositivos y contexto de uso</li>
+                            <li>Soporte multicanal personalizado (chat, video, teléfono)</li>
+                            <li>Dashboards personalizados para usuarios frecuentes o agentes inmobiliarios</li>
+                            <li>Paneles con estadísticas, historial de consultas, alertas personalizadas y seguimiento de oportunidades</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Información y Procesos Legales Personalizados -->
+                <div class="use-case-card orange">
+                    <div class="case-header">
+                        <h3 class="case-title">Información y Procesos Legales Personalizados</h3>
+                        <div class="case-score score-orange">LEGAL</div>
+                    </div>
+                    <p class="case-description">
+                        <strong>⚖️ Asesoría Especializada:</strong> Información personalizada sobre subsidios, documentación legal adaptada y acceso directo 
+                        a agentes especializados según el perfil y etapa del proceso de compra.
+                    </p>
+                    <div class="case-features">
+                        <span class="feature-tag">Subsidios</span>
+                        <span class="feature-tag">Documentación</span>
+                        <span class="feature-tag">Asesoría Legal</span>
+                        <span class="feature-tag">Educación</span>
+                    </div>
+                    <div class="case-actions">
+                        <button class="detail-btn" onclick="toggleDetails('procesos-legales')">
+                            📊 Ver Detalles
+                        </button>
+                    </div>
+                    <div id="procesos-legales" class="details-content" style="display: none;">
+                        <ul>
+                            <li>Información clara y personalizada sobre subsidios y requisitos legales</li>
+                            <li>Acceso a documentación y procesos legales personalizados</li>
+                            <li>Educación y asesoría personalizada según perfil</li>
+                            <li>Integración de contenido educativo adaptado</li>
+                            <li>Acceso directo a agentes especializados para segmentos complejos</li>
+                            <li>Integración de educación, asesoría y herramientas financieras personalizadas</li>
+                            <li>Acceso a asesoría virtual o presencial según segmento</li>
+                            <li>Guías, tutoriales y artículos personalizados según etapa del proceso de compra</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Personalización Innovadora (Avanzada / Futurista) -->
+                <div class="use-case-card purple">
+                    <div class="case-header">
+                        <h3 class="case-title">Personalización Innovadora (Avanzada / Futurista)</h3>
+                        <div class="case-score score-purple">AI++</div>
+                    </div>
+                    <p class="case-description">
+                        <strong>🚀 Tecnología Avanzada:</strong> Implementación de IA, machine learning, realidad aumentada y tecnologías predictivas 
+                        para crear experiencias completamente personalizadas y anticipar necesidades del usuario.
+                    </p>
+                    <div class="case-features">
+                        <span class="feature-tag">IA/ML</span>
+                        <span class="feature-tag">Predictivo</span>
+                        <span class="feature-tag">AR/VR</span>
+                        <span class="feature-tag">Automation</span>
+                    </div>
+                    <div class="case-actions">
+                        <button class="detail-btn" onclick="toggleDetails('innovacion')">
+                            📊 Ver Detalles
+                        </button>
+                    </div>
+                    <div id="innovacion" class="details-content" style="display: none;">
+                        <ul>
+                            <li>Recomendaciones en tiempo real con IA y machine learning</li>
+                            <li>Mejora continua basada en retroalimentación implícita y explícita</li>
+                            <li>Escenarios "what-if" para visualizar impacto de variables (ingresos, plazos, montos)</li>
+                            <li>Notificaciones inteligentes que anticipan cambios y nuevas oportunidades</li>
+                            <li>Visualización interactiva y personalizada (mapas dinámicos, tours virtuales adaptados)</li>
+                            <li>Personalización de recorridos virtuales con puntos de interés destacados</li>
+                            <li>Incorporación de feedback social y reputacional para mayor confianza</li>
+                            <li>Personalización de mensajes, canales y tiempos de contacto para maximizar conversiones</li>
+                            <li>Chatbots y asistentes virtuales 24/7 adaptados a perfil, segmento y etapa de compra</li>
+                            <li>Escalamiento automático a humanos para consultas complejas</li>
+                            <li>Integración de tecnologías avanzadas (realidad aumentada, 3D) personalizadas a preferencias</li>
+                            <li>Uso de datos crediticios y comportamiento histórico para predecir opciones óptimas de financiamiento</li>
+                            <li>Alertas predictivas basadas en análisis de mercado y tendencias locales</li>
+                            <li>Seguimiento automatizado de leads con disparadores según comportamiento y ciclo de compra</li>
+                            <li>Gamificación adaptativa para fomentar interacción y fidelización con incentivos personalizados</li>
+                            <li>Sistemas avanzados de scoring o ranking personalizado de propiedades</li>
+                            <li>Integración profunda con CRM y automatización de marketing personalizada</li>
+                            <li>Ajuste automático de propiedades sugeridas según comportamiento reciente e interacciones</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== NUEVA SECCIÓN: EJEMPLOS DE GRANDES EMPRESAS E INNOVADORAS ==================== -->
+        <div class="companies-section">
+            <h2 class="section-title">Ejemplos de Grandes Empresas e Innovadoras</h2>
+            <div class="companies-grid">
+                <!-- Amazon -->
+                <div class="company-card amazon">
+                    <h3 class="card-title">Amazon</h3>
+                    <ul class="feature-list">
+                        <li><strong>Recomendaciones:</strong> "Los clientes que compraron este artículo también compraron"</li>
+                        <li><strong>Homepage Personalizada:</strong> Ofertas y categorías basadas en historial.</li>
+                        <li><strong>Email Dinámico:</strong> Recordatorios de carrito abandonado y ofertas exclusivas.</li>
+                    </ul>
+                </div>
+                
+                <!-- Netflix -->
+                <div class="company-card netflix">
+                    <h3 class="card-title">Netflix</h3>
+                    <ul class="feature-list">
+                        <li><strong>Miniaturas Dinámicas:</strong> Cambian según preferencias visuales.</li>
+                        <li><strong>Algoritmo de Recomendación:</strong> Filtrado colaborativo + Deep Learning.</li>
+                        <li><strong>Secciones Personalizadas:</strong> "Mi lista" y "Seguir viendo".</li>
+                    </ul>
+                </div>
+
+                <!-- Spotify -->
+                <div class="company-card spotify">
+                    <h3 class="card-title">Spotify</h3>
+                    <ul class="feature-list">
+                        <li><strong>Playlists Personalizadas:</strong> "Discover Weekly" y "Release Radar".</li>
+                        <li><strong>Interfaz Adaptativa:</strong> Recomendaciones basadas en hábitos de escucha.</li>
+                        <li><strong>Resumen Anual:</strong> "Tu resumen de fin de año" con estadísticas de uso.</li>
+                    </ul>
+                </div>
+
+                <!-- Google -->
+                <div class="company-card google">
+                    <h3 class="card-title">Google</h3>
+                    <ul class="feature-list">
+                        <li><strong>Búsqueda Personalizada:</strong> Resultados adaptados al historial y ubicación.</li>
+                        <li><strong>Anuncios Personalizados:</strong> Basados en intereses y datos demográficos.</li>
+                        <li><strong>Feed de Discover:</strong> Noticias y temas relevantes al usuario.</li>
+                    </ul>
+                </div>
+
+                <!-- Airbnb -->
+                <div class="company-card airbnb">
+                    <h3 class="card-title">Airbnb</h3>
+                    <ul class="feature-list">
+                        <li><strong>Alojamiento Sugerido:</strong> Basado en historial de viajes y preferencias.</li>
+                        <li><strong>Experiencias Recomendadas:</strong> Actividades locales según afinidad.</li>
+                        <li><strong>Emails Personalizados:</strong> Itinerarios y ofertas especiales.</li>
+                    </ul>
+                </div>
+
+                <!-- Dynamic Yield -->
+                <div class="company-card dynamic">
+                    <h3 class="card-title">Dynamic Yield</h3>
+                    <ul class="feature-list">
+                        <li><strong>Personalización Omnicanal:</strong> Adaptación de contenidos en tiempo real.</li>
+                        <li><strong>Motor de Reglas:</strong> Configuración de experiencias según segmentos.</li>
+                        <li><strong>Integración:</strong> Con e-commerce y CRM para datos unificados.</li>
+                    </ul>
+                </div>
+
+                <!-- Segment -->
+                <div class="company-card segment">
+                    <h3 class="card-title">Segment</h3>
+                    <ul class="feature-list">
+                        <li><strong>Unificación de Datos:</strong> Perfilar al usuario a partir de múltiples fuentes.</li>
+                        <li><strong>Segmentación Automática:</strong> Creación de grupos basados en eventos y atributos.</li>
+                        <li><strong>Integraciones:</strong> Con herramientas de marketing y análisis.</li>
+                    </ul>
+                </div>
+
+                <!-- Optimizely -->
+                <div class="company-card optimizely">
+                    <h3 class="card-title">Optimizely</h3>
+                    <ul class="feature-list">
+                        <li><strong>A/B Testing Avanzado:</strong> Entornos de prueba para múltiples variantes.</li>
+                        <li><strong>IA de Personalización:</strong> Recomendaciones dinámicas según comportamiento.</li>
+                        <li><strong>Analítica en Tiempo Real:</strong> Ajustes de contenido automatizados.</li>
+                    </ul>
+                </div>
+
+                <!-- Heap Analytics -->
+                <div class="company-card heap">
+                    <h3 class="card-title">Heap Analytics</h3>
+                    <ul class="feature-list">
+                        <li><strong>Análisis Automático:</strong> Seguimiento de interacciones sin etiquetas previas.</li>
+                        <li><strong>Insights Predictivos:</strong> Recomendaciones para optimizar UX y conversión.</li>
+                        <li><strong>Segmentación Dinámica:</strong> Creación de audiencias basadas en comportamiento.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== SECCIÓN EXISTENTE: LABORATORIO DE INNOVACIÓN ==================== -->
+        <!-- ==================== LABORATORIO DE INNOVACIÓN – CASOS DE VANGUARDIA MUNDIAL ==================== -->
+        <div class="examples-section">
+            <h2 class="section-title">🚀 Laboratorio de Innovación - Casos de Vanguardia Mundial</h2>
+            <div class="innovation-intro">
+              <p class="subtitulo">
+                Explora las implementaciones más avanzadas de personalización que están redefiniendo la experiencia inmobiliaria digital
+              </p>
+            </div>
+        
+            <div class="use-cases-grid lab-grid">
+              <!-- Zillow Neural Engine -->
+              <div class="use-case-card blue premium-glow">
+                <div class="case-header">
+                  <div class="company-logo">🏡</div>
+                  <h3 class="case-title">Zillow Neural Engine</h3>
+                  <div class="case-score small-score score-blue">🦄</div>
+                </div>
+                <p class="case-description">
+                  <strong>🧠 Inteligencia Neuronal Inmobiliaria:</strong> Sistema que procesa 200M+ puntos de datos para crear el "gemelo digital" de cada propiedad, 
+                  permitiendo búsquedas conversacionales como 
+                  <em>"Encuentra mi hogar perfecto considerando mi estilo de vida nómada y mis 2 golden retrievers"</em>
+                </p>
+                <div class="case-features">
+                  <span class="feature-tag neural">🧠 Neural Zestimate®</span>
+                  <span class="feature-tag ai">🤖 Conversational AI</span>
+                  <span class="feature-tag vision">👁️ Computer Vision</span>
+                  <span class="feature-tag predict">🔮 Predictive Engine</span>
+                </div>
+                <div class="case-actions">
+                  <button class="detail-btn gradient-btn" onclick="toggleDetails('zillow-neural')">
+                    🔬 Análisis Profundo
+                  </button>
+                </div>
+                <div id="zillow-neural" class="details-content tech-details" style="display: none;">
+                  <div class="tech-breakdown">
+                    <h4>🔬 Arsenal Tecnológico Avanzado:</h4>
+                    <div class="tech-grid">
+                      <div class="tech-item">
+                        <strong>🧬 Neural Zestimate®:</strong> Red neuronal que analiza 7.5M variables por propiedad, 
+                        desde patrones de tráfico hasta microclimas locales
+                      </div>
+                      <div class="tech-item">
+                        <strong>🎯 Hyper-Targeting:</strong> Segmentación conductual en tiempo real basada en 500+ señales digitales
+                      </div>
+                      <div class="tech-item">
+                        <strong>🌐 AI Showcase℠:</strong> Tours 3D adaptativos que resaltan características según el perfil psicográfico
+                      </div>
+                      <div class="tech-item">
+                        <strong>⚡ Instant Insights:</strong> Alertas predictivas con 72h de anticipación sobre cambios de mercado
+                      </div>
+                      <div class="tech-item">
+                        <strong>🗣️ Natural Language:</strong> Procesamiento semántico que entiende contexto emocional y aspiracional
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Compass Hybrid Intelligence -->
+              <div class="use-case-card green premium-glow">
+                <div class="case-header">
+                  <div class="company-logo">🧭</div>
+                  <h3 class="case-title">Compass Hybrid Intelligence</h3>
+                  <div class="case-score small-score score-green">⚡</div>
+                </div>
+                <p class="case-description">
+                  <strong>🎭 Teatro Digital Personalizado:</strong> Orquesta experiencias únicas combinando IA de agentes virtuales con expertise humano, 
+                  creando un "concierge inmobiliario" que nunca duerme y siempre aprende.
+                </p>
+                <div class="case-features">
+                  <span class="feature-tag crm">📊 CRM Quantum</span>
+                  <span class="feature-tag analytics">📈 Market DNA</span>
+                  <span class="feature-tag automation">🔄 Smart Automation</span>
+                  <span class="feature-tag insights">💡 Behavioral Insights</span>
+                </div>
+                <div class="case-actions">
+                  <button class="detail-btn gradient-btn" onclick="toggleDetails('compass-hybrid')">
+                    🎯 Deep Dive
+                  </button>
+                </div>
+                <div id="compass-hybrid" class="details-content tech-details" style="display: none;">
+                  <div class="tech-breakdown">
+                    <h4>🎭 Suite de Personalización Avanzada:</h4>
+                    <div class="tech-grid">
+                      <div class="tech-item">
+                        <strong>🧠 CRM Quantum:</strong> Sistema que predice necesidades del cliente 3 pasos antes que las verbalice
+                      </div>
+                      <div class="tech-item">
+                        <strong>🌍 Market DNA:</strong> Análisis genético de barrios que revela tendencias micro-locales
+                      </div>
+                      <div class="tech-item">
+                        <strong>🎪 Lead Orchestration:</strong> Automatización conductual que ajusta el timing perfecto para cada interacción
+                      </div>
+                      <div class="tech-item">
+                        <strong>🎨 Dynamic Dashboards:</strong> Interfaces que se transforman según el arquetipo del usuario (Explorer, Analyst, Dreamer)
+                      </div>
+                      <div class="tech-item">
+                        <strong>📡 Omnichannel Sync:</strong> Experiencia fluida entre dispositivos con memoria contextual persistente
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Leo CoPilot: The Agent's Brain -->
+              <div class="use-case-card purple premium-glow">
+                <div class="case-header">
+                  <div class="company-logo">🤖</div>
+                  <h3 class="case-title">Leo CoPilot: The Agent's Brain</h3>
+                  <div class="case-score small-score score-purple">🌟</div>
+                </div>
+                <p class="case-description">
+                  <strong>🚀 Simbiosis Humano-IA:</strong> Un copiloto digital que no solo asiste, sino que anticipa, aprende y evoluciona con cada agente, 
+                  convirtiéndose en la extensión cognitiva perfecta para profesionales inmobiliarios del futuro.
+                </p>
+                <div class="case-features">
+                  <span class="feature-tag assistant">🤝 AI Copilot</span>
+                  <span class="feature-tag workflow">⚙️ Smart Workflows</span>
+                  <span class="feature-tag prediction">🔮 Predictive Needs</span>
+                  <span class="feature-tag integration">🔗 Financial Sync</span>
+                </div>
+                <div class="case-actions">
+                  <button class="detail-btn gradient-btn" onclick="toggleDetails('leo-copilot')">
+                    🧬 DNA Tecnológico
+                  </button>
+                </div>
+                <div id="leo-copilot" class="details-content tech-details" style="display: none;">
+                  <div class="tech-breakdown">
+                    <h4>🧬 Anatomía del Copiloto Perfecto:</h4>
+                    <div class="tech-grid">
+                      <div class="tech-item">
+                        <strong>🧠 Leo's Neural Core:</strong> IA que mapea el ADN profesional de cada agente y se sincroniza con su ritmo de trabajo
+                      </div>
+                      <div class="tech-item">
+                        <strong>🔮 Predictive Radar:</strong> Sistema que anticipa necesidades 48h antes, preparando recursos y oportunidades
+                      </div>
+                      <div class="tech-item">
+                        <strong>⚙️ Workflow DNA:</strong> Automatización que evoluciona, aprendiendo de cada decisión y optimizando procesos únicos
+                      </div>
+                      <div class="tech-item">
+                        <strong>💰 Financial X-Ray:</strong> Calculadoras que se ajustan al perfil de riesgo y capacidades específicas del cliente
+                      </div>
+                      <div class="tech-item">
+                        <strong>📊 Performance Mirror:</strong> Analytics personalizados que reflejan el estilo único y objetivos de cada profesional
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+      <!-- Labs Experimentales – Futuro Próximo -->
+      <div class="use-case-card orange premium-glow experimental">
+        <div class="case-header">
+          <div class="company-logo">🧪</div>
+          <h3 class="case-title">Labs Experimentales - Futuro Próximo</h3>
+          <div class="case-score small-score score-orange">🧪</div>
+        </div>
+        <p class="case-description">
+          <strong>🔬 Laboratorios de Innovación:</strong> Tecnologías emergentes que están siendo probadas en entornos controlados y que definirán la próxima generación 
+          de experiencias inmobiliarias personalizadas.
+        </p>
+        <div class="case-features">
+          <span class="feature-tag experimental">🥽 VR/AR Immersive</span>
+          <span class="feature-tag blockchain">⛓️ Blockchain ID</span>
+          <span class="feature-tag voice">🗣️ Voice Commerce</span>
+          <span class="feature-tag iot">📡 IoT Integration</span>
+        </div>
+        <div class="case-actions">
+          <button class="detail-btn gradient-btn experimental-btn" onclick="toggleDetails('experimental-tech')">
+            🚀 Explorar Futuro
+          </button>
+        </div>
+        <div id="experimental-tech" class="details-content tech-details" style="display: none;">
+          <div class="future-tech">
+            <h4>🚀 Tecnologías del Mañana:</h4>
+            <div class="future-grid">
+              <div class="future-item">
+                <strong>🥽 Spatial Computing:</strong> Tours inmersivos con Apple Vision Pro que permiten "vivir" 24 h en una propiedad virtual
+              </div>
+              <div class="future-item">
+                <strong>⛓️ Blockchain Identity:</strong> Perfiles descentralizados que preservan privacidad mientras personalizan experiencias
+              </div>
+              <div class="future-item">
+                <strong>🗣️ Voice-First Commerce:</strong> Transacciones inmobiliarias iniciadas y completadas mediante comandos de voz natural
+              </div>
+              <div class="future-item">
+                <strong>📡 IoT Ecosystem:</strong> Propiedades inteligentes que se "presentan" automáticamente según el perfil del visitante
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+            <!-- ==================== DNA DE LA PERSONALIZACIÓN AVANZADA ==================== -->
+            <div class="dna-section">
+                <h3 class="section-title dna-title">🧬 DNA de la Personalización Avanzada</h3>
+                <div class="patterns-advanced-grid">
+                  <!-- Neural Interfaces -->
+                  <div class="pattern-card">
+                    <div class="pattern-icon-wrapper">
+                      <span class="pattern-icon">🧠</span>
+                    </div>
+                    <div class="pattern-content">
+                      <h4 class="pattern-title">Neural Interfaces</h4>
+                      <p class="pattern-description">
+                        Sistemas que aprenden y se adaptan como el cerebro humano, creando conexiones únicas con cada usuario.
+                      </p>
+                      <p class="pattern-stats">Adopción: 78 % • ROI: +340 %</p>
+                    </div>
+                  </div>
+              
+                  <!-- Predictive Orchestration -->
+                  <div class="pattern-card">
+                    <div class="pattern-icon-wrapper">
+                      <span class="pattern-icon">🔮</span>
+                    </div>
+                    <div class="pattern-content">
+                      <h4 class="pattern-title">Predictive Orchestration</h4>
+                      <p class="pattern-description">
+                        Anticipación inteligente que orquesta experiencias antes de que el usuario sepa que las necesita.
+                      </p>
+                      <p class="pattern-stats">Precisión: 91 % • Engagement: +67 %</p>
+                    </div>
+                  </div>
+              
+                  <!-- Adaptive Automation -->
+                  <div class="pattern-card">
+                    <div class="pattern-icon-wrapper">
+                      <span class="pattern-icon">⚡</span>
+                    </div>
+                    <div class="pattern-content">
+                      <h4 class="pattern-title">Adaptive Automation</h4>
+                      <p class="pattern-description">
+                        Workflows que evolucionan en tiempo real, optimizándose continuamente según comportamiento del usuario.
+                      </p>
+                      <p class="pattern-stats">Eficiencia: +250 % • Satisfacción: 94 %</p>
+                    </div>
+                  </div>
+              
+                  <!-- Human-AI Symbiosis -->
+                  <div class="pattern-card">
+                    <div class="pattern-icon-wrapper">
+                      <span class="pattern-icon">🤝</span>
+                    </div>
+                    <div class="pattern-content">
+                      <h4 class="pattern-title">Human-AI Symbiosis</h4>
+                      <p class="pattern-description">
+                        Colaboración perfecta entre inteligencia artificial y expertise humano para experiencias superiores.
+                      </p>
+                      <p class="pattern-stats">Conversión: +180 % • NPS: 89</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <!-- ==================== INSIGHTS DE PERSONALIZACIÓN ==================== -->
+        <div class="insights-section">
+            <h2 class="section-title">Insights de Personalización</h2>
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <h3 class="insight-title">🤖 Automatización Inteligente</h3>
+                    <div class="insight-percentage">92%</div>
+                    <p>De las funcionalidades incorporan automatización y decisiones basadas en datos</p>
+                </div>
+                
+                <div class="insight-card">
+                    <h3 class="insight-title">🎯 Segmentación Avanzada</h3>
+                    <div class="insight-percentage">85%</div>
+                    <p>Utilizan múltiples criterios de segmentación para personalización efectiva</p>
+                </div>
+                
+                <div class="insight-card">
+                    <h3 class="insight-title">⚡ Tiempo Real</h3>
+                    <div class="insight-percentage">78%</div>
+                    <p>Implementan personalización dinámica y adaptación en tiempo real</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================== METODOLOGÍA ==================== -->
+        <div class="methodology">
+            <h3>Metodología del Análisis</h3>
+            <div class="methodology-content">
+                <p>Este análisis categoriza las funcionalidades de personalización en marketplaces inmobiliarios según su complejidad tecnológica y impacto en la experiencia del usuario. Las categorías van desde funcionalidades CORE (básicas y esenciales) hasta AI++ (avanzadas con tecnologías emergentes).</p>
+                <br>
+                <p>La evaluación considera factores como: nivel de personalización, uso de datos, automatización, impacto en conversión, y diferenciación competitiva en el mercado inmobiliario actual.</p>
+            </div>
+        </div>
+
+        <!-- ==================== FOOTER ==================== -->
+        <div class="footer">
+            <div class="footer-content">
+                <p>&copy; 2025 Funcionalidades de Personalización - Marketplaces Inmobiliarios</p>
+                <p>Análisis completo de capacidades de personalización del sector inmobiliario</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== SCRIPT PARA DETALLES ==================== -->
+    <script>
+        function toggleDetails(id) {
+            const element = document.getElementById(id);
+            if (element.style.display === 'none') {
+                element.style.display = 'block';
+            } else {
+                element.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

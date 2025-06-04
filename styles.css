@@ -172,7 +172,40 @@ body {
     border-radius: 15px;
     font-size: 0.8rem;
     font-weight: 500;
+    position: relative;           /* Necesario para posicionar el pseudo-elemento */
+    cursor: pointer;
 }
+
+.highlight-tag:hover::after {
+    content: attr(data-tooltip);  /* Toma el texto desde data-tooltip */
+    position: absolute;
+    top: 120%;                    /* Ajusta para que aparezca debajo de la etiqueta */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #2e3a59;          /* Fondo oscuro acorde a la paleta */
+    color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    white-space: pre-line;        /* Permite saltos de línea en el tooltip */
+    font-size: 0.875rem;          /* Tamaño de texto ligeramente menor */
+    line-height: 1.2;
+    width: 200px;                 /* Ancho fijo para no desbordar */
+    text-align: left;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
+  /* Flecha señalando desde el tooltip hacia la etiqueta */
+  .highlight-tag:hover::before {
+    content: \"\";
+    position: absolute;
+    top: 100%;                     /* Justo encima del tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 6px;
+    border-style: solid;
+    border-color: #2e3a59 transparent transparent transparent;
+  }
 
 /* Comparison section */
 .comparison-section {
@@ -545,6 +578,16 @@ body {
     font-size: 1.2rem;
     box-shadow: 0 4px 15px rgba(0,0,0,0.2);
 }
+
+.case-score.small-score {
+    width: 50px;      /* 80% del tamaño original */
+    height: 50px;     /* 80% del tamaño original */
+    font-size: 1rem;  /* Reducir un poco el tamaño del texto dentro del círculo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 /* Score colors for use cases */
 .score-blue { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); }

@@ -1,0 +1,653 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estructura base */
+html {
+    height: 100%;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    overflow: hidden;
+}
+
+/* ----------------- HEADER ----------------- */
+.header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.header h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+    position: relative;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.header p {
+    font-size: 1.3rem;
+    opacity: 0.95;
+    position: relative;
+    z-index: 2;
+}
+
+/* ----------------- MARKET OVERVIEW ----------------- */
+.market-overview {
+    padding: 40px 30px;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.overview-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Grid de “Categorías” */
+.use-cases-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* Card individual de Caso de Uso */
+.use-case-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border-left: 6px solid;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.use-case-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1), transparent);
+    border-radius: 50%;
+    transform: translate(30px, -30px);
+}
+
+.use-case-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+/* Colores para casos de uso */
+.use-case-card.blue        { border-left-color: #3498db; }
+.use-case-card.green       { border-left-color: #27ae60; }
+.use-case-card.purple      { border-left-color: #9b59b6; }
+.use-case-card.orange      { border-left-color: #f39c12; }
+
+/* Puntuaciones (score) dentro de cards */
+.case-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.case-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2c3e50;
+    flex: 1;
+}
+
+.case-score {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.score-blue    { background: linear-gradient(135deg, #3498db 0%, #2980b9 100%); }
+.score-green   { background: linear-gradient(135deg, #27ae60 0%, #2ecc71 100%); }
+.score-purple  { background: linear-gradient(135deg, #9b59b6 0%, #8e44ad 100%); }
+.score-orange  { background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%); }
+
+.case-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.case-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.feature-tag {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+/* Botón “Ver Detalles” */
+.case-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.detail-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.detail-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+/* Contenido oculto para detalles */
+.details-content {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* ----------------- PÁRENDERO DE CATEGORÍA / BENCHMARK ----------------- */
+.back-btn {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    margin-bottom: 30px;
+}
+
+.back-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.6);
+}
+
+/* ----------------- SECCIÓN: EJEMPLOS DE GRANDES EMPRESAS ----------------- */
+.companies-section {
+    padding: 40px 30px;
+    background: #f5f7fa;
+    margin-bottom: 50px;
+}
+
+.companies-section .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+/* Card individual de Empresa */
+.company-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    border-left: 6px solid;
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.company-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+}
+
+/* Color de borde según empresa */
+.company-card.amazon      { border-left-color: #e74c3c; }
+.company-card.netflix     { border-left-color: #3498db; }
+.company-card.spotify     { border-left-color: #27ae60; }
+.company-card.google      { border-left-color: #f1c40f; }
+.company-card.airbnb      { border-left-color: #9b59b6; }
+.company-card.dynamic     { border-left-color: #e67e22; }
+.company-card.segment     { border-left-color: #c0392b; }
+.company-card.optimizely  { border-left-color: #c0392b; }
+.company-card.heap        { border-left-color: #e74c3c; }
+
+/* Título de cada empresa */
+.company-card .card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+/* Lista de funcionalidades dentro de cada card */
+.company-card .feature-list {
+    margin-top: 10px;
+    list-style: none;
+}
+
+.company-card .feature-list li {
+    margin: 8px 0;
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.company-card .feature-list li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: #667eea;
+    font-weight: bold;
+}
+
+/* ----------------- SECCIÓN: LABORATORIO DE INNOVACIÓN (EXAMPLES-SECTION) ----------------- */
+.examples-section {
+    padding: 40px 30px;
+    background: white;
+    margin-bottom: 30px;
+}
+
+.examples-section .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-weight: 800;
+    position: relative;
+}
+
+.examples-section .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+}
+
+/* Se reutiliza .use-cases-grid y .use-case-card para los cards de "Laboratorio de Innovación" */
+/* ... (deja todo tal cual estaba en tu CSS original para esa sección) ... */
+
+/* ----------------- INSIGHTS DE PERSONALIZACIÓN ----------------- */
+.insights-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 50px 30px;
+}
+
+.insights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.insight-card {
+    background: rgba(255,255,255,0.1);
+    padding: 30px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.2);
+    transition: all 0.4s ease;
+}
+
+.insight-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255,255,255,0.15);
+}
+
+.insight-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.insight-percentage {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin: 15px 0;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* ----------------- METODOLOGÍA ----------------- */
+.methodology {
+    background: #ecf0f1;
+    padding: 30px;
+    margin: 30px 0;
+    border-radius: 15px;
+    border-left: 5px solid #3498db;
+}
+
+.methodology h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* ----------------- FOOTER ----------------- */
+.footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    color: white;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ----------------- PESTAÑAS (Tabs) ----------------- */
+.tabs-container {
+    background: white;
+    border-radius: 20px 20px 0 0;
+    padding: 0;
+    margin-bottom: 0;
+    box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+}
+
+.tabs-nav {
+    display: flex;
+    border-bottom: 2px solid #e1e8ed;
+    background: #f8f9fa;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.tab-button {
+    flex: 1;
+    padding: 20px 30px;
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #6c757d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-button:hover {
+    background: rgba(108, 117, 125, 0.1);
+    color: #495057;
+}
+
+.tab-button.active {
+    background: white;
+    color: #2c3e50;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+}
+
+.tab-content {
+    display: none;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive menor a 768px para tabs */
+@media (max-width: 768px) {
+    .tab-button {
+        padding: 15px 20px;
+        font-size: 1rem;
+    }
+}
+
+/* ==================== AJUSTES PARA DNA DE LA PERSONALIZACIÓN AVANZADA ==================== */
+.dna-section {
+    padding: 40px 30px;
+    background: #ffffff;  /* Mantener fondo blanco */
+    margin-bottom: 30px;
+}
+
+/* Título de la sección DNA */
+.dna-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* Grid para los pattern cards */
+.patterns-advanced-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    align-items: stretch;
+}
+
+/* Cartas de cada patrón */
+.pattern-card {
+    display: flex;
+    background: #fdfdfd;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pattern-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* Wrapper para el ícono circular */
+.pattern-icon-wrapper {
+    flex-shrink: 0;
+    width: 50px;           /* Reducido al 80% aprox. */
+    height: 50px;          /* Reducido al 80% aprox. */
+    border-radius: 50%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+/* Ícono dentro del círculo */
+.pattern-icon {
+    font-size: 28px;       /* Reducido para que quepa en el wrapper */
+    color: white;
+    line-height: 1;
+}
+
+/* Contenido textual dentro de cada carta */
+.pattern-content {
+    flex: 1;
+}
+
+.pattern-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.pattern-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.pattern-stats {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+/* ==================== AJUSTES PARA “LABORATORIO DE INNOVACIÓN” ==================== */
+/* Reducir tamaño del ícono en el círculo de score anterior */
+.case-score.small-score {
+    width: 50px;            /* antes era ~60px, ahora ~50px */
+    height: 50px;           /* antes era ~60px, ahora ~50px */
+    font-size: 1rem;      /* reducir un poco la fuente interna */
+    line-height: 1;
+}
+
+/* Asegurarse de que el texto dentro del círculo no se corte */
+.case-score.small-score {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Opcional: si quieres un color de fondo ligeramente distinto en la zona del laboratorio */
+.examples-section {
+    background: #ffffff;    /* Asegúrate de que el fondo siga siendo blanco */
+    padding: 40px 30px;
+    margin-bottom: 50px;
+}
+
+/* Ajustar la altura de la grid interna del laboratorio para no “estirar demasiado” */
+.lab-grid .use-case-card {
+    padding: 25px 20px;     /* un poco menos de padding para que visualmente quede más compacto */
+}
+
+/* Eliminar (o invisibilizar) por completo cualquier regla que afecte a .innovation-metrics */
+/* Si aún existiera, puedes añadir: */
+.innovation-metrics {
+    display: none !important;
+}
+
+/* ==================== Pequeños retoques para que no haya solape de bloques ==================== */
+@media (max-width: 768px) {
+    .patterns-advanced-grid {
+        grid-template-columns: 1fr;
+    }
+    .lab-grid .use-case-card {
+        margin-bottom: 30px;
+    }
+}
+
+/* Ajustar márgenes de las secciones */
+.dna-section, .examples-section, .laboratorio-section {
+    margin-bottom: 30px; /* Reducir el espacio entre las secciones */
+}
+
+/* Ajustar tamaño de texto en los títulos y subtítulos */
+.section-title {
+    font-size: 2.5rem; /* Reducir el tamaño del título principal */
+    margin-bottom: 10px;
+}
+
+/* Ajustar márgenes entre cada categoría de personalización */
+.use-case-card {
+    margin-bottom: 25px;
+}
+
+/* Estilo para el subtítulo */
+.subtitulo {
+    font-size: 1.2rem;          /* Tamaño de fuente más pequeño que el título principal */
+    font-weight: 500;           /* Peso de fuente medio para darle énfasis, sin ser demasiado grueso */
+    color: #2c3e50;             /* Color de texto oscuro, pero más suave que el del título principal */
+    margin: 20px 0;             /* Espacio vertical antes y después del subtítulo */
+    text-align: center;         /* Alineado al centro para mejor visibilidad */
+    line-height: 1.6;           /* Espaciado entre líneas para mayor claridad */
+    max-width: 800px;           /* Ancho máximo para no estirarlo demasiado */
+    margin-left: auto;          /* Centrado automático */
+    margin-right: auto;         /* Centrado automático */
+    text-transform: capitalize;  /* Primer letra de cada palabra en mayúscula */
+}
